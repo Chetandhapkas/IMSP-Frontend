@@ -1,0 +1,81 @@
+/* ========== FOOTER STYLING ========== */
+.school-footer {
+  background-color: #1e2a1d; /* darker green */
+  color: #ffffff;
+  padding: 40px 50px;
+  text-align: left;
+  border-top: 3px solid #f5d742;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Footer Sections */
+.footer-about h2 {
+  color: #f5d742;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.footer-about p {
+  margin: 5px 0;
+  color: #dcdcdc;
+  font-size: 0.95rem;
+}
+
+.footer-contact h3,
+.footer-links h3 {
+  color: #f5d742;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.footer-contact ul,
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-contact li,
+.footer-links li {
+  margin: 6px 0;
+  font-size: 0.95rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #f5d742;
+}
+
+/* Footer bottom */
+.school-footer p:last-child {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #bfbfbf;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-about h2 {
+    font-size: 1.3rem;
+  }
+
+  .footer-contact h3,
+  .footer-links h3 {
+    font-size: 1.1rem;
+  }
+}

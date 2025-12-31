@@ -1,0 +1,603 @@
+/* ============================
+   GLOBAL STYLES
+============================ */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* ============================
+   HEADER / NAVBAR
+============================ */
+.main-header {
+  position: relative;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.main-header h1 {
+  position: absolute;
+  z-index: 2;
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #000000;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.motto {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+.header-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.main-nav {
+  background: #002147;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a, .main-nav button {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 15px;
+  transition: 0.3s;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.main-nav a:hover, .main-nav button:hover {
+  color: #ff9800;
+}
+
+/* ============================
+   HERO SECTION
+============================ */
+.hero {
+  position: relative;
+  height: 80vh;
+  background: url('../assets/images/military-school-bg.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero-tagline {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  animation: fadeIn 3s ease-in-out;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #ff9800;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s;
+  animation: fadeIn 4s ease-in-out;
+}
+
+.cta-button:hover {
+  background: #e68900;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================
+   ABOUT SECTION
+============================ */
+.main-box {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.about-content,
+.swiper-box {
+  flex: 1;
+  box-sizing: border-box;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-content h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #2d2d2d;
+}
+
+.about-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* 🎯 Swiper Box (Medium, Perfect Fit Images) */
+.swiper-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper {
+  width: 90%;           /* Take 90% of available width */
+  height: 420px;        /* Medium height */
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* 🖼️ Make images fit perfectly inside the slider */
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* Image fills frame neatly */
+  border-radius: 15px;
+}
+
+/* 📱 Responsive for Mobile */
+@media (max-width: 768px) {
+  .main-box {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .swiper {
+    width: 95%;
+    height: 280px;       /* Slightly smaller on mobile */
+  }
+}
+
+/* ============================
+   FOUNDER SECTION
+============================ */
+.section-heading {
+  text-align: center;
+  color: #2e3d1f;
+  font-size: 40px;
+  font-family: 'Anton', 'Oswald', sans-serif;
+  font-weight: 700;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  background-color: #4b5320;
+  margin: 10px auto 0 auto;
+  border-radius: 2px;
+}
+
+/* Founder Section Container */
+.founder-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 50px 20px;
+  background-color: #ffffff;
+}
+
+/* Row Layouts */
+.founder-row-2,
+.founder-row-3 {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* Individual Box Styling */
+.box {
+  background-color: #fdfdfd;
+  border: 2px solid #4b5320;
+  border-radius: 12px;
+  width: 270px;
+  text-align: center;
+  padding: 20px 15px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Founder Image Styling */
+.box img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #4b5320;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.box img:hover {
+  transform: scale(1.05);
+}
+
+/* Founder Text Styling */
+.box h3 {
+  color: #2e3d1f;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.box h5 {
+  color: #4b5320;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.box p {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.5;
+  padding: 0 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .founder-row-2,
+  .founder-row-3 {
+    gap: 40px;
+  }
+  .box {
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 32px;
+  }
+  .box {
+    width: 220px;
+    padding: 15px;
+  }
+  .box img {
+    width: 160px;
+    height: 160px;
+  }
+  .box h3 {
+    font-size: 20px;
+  }
+  .box h5 {
+    font-size: 16px;
+  }
+  .box p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .founder-section {
+    padding: 30px 10px;
+  }
+  .section-heading {
+    font-size: 28px;
+  }
+  .box {
+    width: 90%;
+    padding: 15px;
+  }
+  .box img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+/* ============================
+   GALLERY SECTION
+============================ */
+.gallery-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.gallery-section .section-heading {
+  margin-bottom: 40px;
+}
+
+.gallery-swiper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 0px;   /* ✅ Removed extra bottom space */
+}
+
+.gallery-slide {
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  padding: 0;   /* ✅ No inner spacing */
+  margin: 0;    /* ✅ No bottom space */
+}
+
+.gallery-slide img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.gallery-slide:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.show-more-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 30px;
+  font-size: 16px;
+  background: linear-gradient(135deg, #ddeca2, #6a671d);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.show-more-btn:hover {
+  background: linear-gradient(135deg, #0e1200, #6a671d);
+  transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .gallery-slide img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-slide img {
+    height: 150px;
+  }
+}
+
+
+/* ============================
+   FOOTER SECTION
+============================ */
+.school-footer {
+  background: linear-gradient(to right, #2f4f4f, #556b2f);
+  color: #fff;
+  padding: 40px 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.footer-about, .footer-contact, .footer-links {
+  flex: 1 1 300px;
+  margin: 20px 0;
+}
+
+.school-footer h2, .school-footer h3 {
+  color: #ffc107;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #ffc107;
+}
+
+/* ============================
+   RESPONSIVE DESIGN
+============================ */
+@media screen and (max-width: 768px) {
+  .main-header h1 {
+    font-size: 24px;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-box {
+    flex-direction: column;
+  }
+  .box {
+    width: 90%;
+  }
+}
+
+/* ============================
+   POPUP OVERLAY
+============================ */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;               /* IMPORTANT (so popup is visible) */
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  box-sizing: border-box;
+}
+
+/* ============================
+   POPUP BOX
+============================ */
+.popup {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+   z-index: 10000; 
+  box-sizing: border-box;       /* Prevents layout breaking */
+}
+
+.popup h2 {
+  margin-bottom: 15px;
+  color: #222;
+}
+
+/* ============================
+   INPUT FIELDS
+============================ */
+.popup input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* ============================
+   BUTTONS
+============================ */
+.popup button {
+  background-color: #0055a5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 16px;
+}
+
+.popup button:hover {
+  background-color: #003f7f;
+}
+
+/* ============================
+   CLOSE BUTTON
+============================ */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* ============================
+   MOBILE RESPONSIVE
+============================ */
+@media (max-width: 480px) {
+  .popup {
+    width: 95%;
+    padding: 20px;
+  }
+}
