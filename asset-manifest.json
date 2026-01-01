@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/IMSP-Frontend/static/css/main.7cf59b9b.css",
-    "main.js": "/IMSP-Frontend/static/js/main.34bd3db5.js",
+    "main.css": "/IMSP-Frontend/static/css/main.ca554a0f.css",
+    "main.js": "/IMSP-Frontend/static/js/main.183cf4f8.js",
     "static/js/453.d7446e4a.chunk.js": "/IMSP-Frontend/static/js/453.d7446e4a.chunk.js",
     "static/media/headerb.mp4": "/IMSP-Frontend/static/media/headerb.443e948b1d978f64dbc0.mp4",
     "static/media/staff.png": "/IMSP-Frontend/static/media/staff.b03c53ab21fae5e18080.png",
@@ -24,12 +24,12 @@
     "static/media/colonel.png": "/IMSP-Frontend/static/media/colonel.f4b65f08fab0af71794f.png",
     "static/media/viceprincipal.jpg": "/IMSP-Frontend/static/media/viceprincipal.42bde15b47506651a416.jpg",
     "index.html": "/IMSP-Frontend/index.html",
-    "main.7cf59b9b.css.map": "/IMSP-Frontend/static/css/main.7cf59b9b.css.map",
-    "main.34bd3db5.js.map": "/IMSP-Frontend/static/js/main.34bd3db5.js.map",
+    "main.ca554a0f.css.map": "/IMSP-Frontend/static/css/main.ca554a0f.css.map",
+    "main.183cf4f8.js.map": "/IMSP-Frontend/static/js/main.183cf4f8.js.map",
     "453.d7446e4a.chunk.js.map": "/IMSP-Frontend/static/js/453.d7446e4a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7cf59b9b.css",
-    "static/js/main.34bd3db5.js"
+    "static/css/main.ca554a0f.css",
+    "static/js/main.183cf4f8.js"
   ]
 }
