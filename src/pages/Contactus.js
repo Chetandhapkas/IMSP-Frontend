@@ -1,5 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import locationImg from "../assets/sliderimage/location.jpg";
+import { FaYoutube, FaFacebookF, FaTwitter } from "react-icons/fa";
+
+
 
 
 export default function ContactUs() {
@@ -12,19 +16,21 @@ export default function ContactUs() {
           <h1 style={styles.title}>Contact Us</h1>
 
           <div style={styles.infoBox}>
-            <p><strong>📞 Phone:</strong> 07158-123456</p>
-            <p><strong>📱 Mobile:</strong> +91 9876543210</p>
+            <p><strong>📞 Phone:</strong> +91 9890444836 </p>
+            <p><strong>📱 Mobile:</strong> +91 8087423247</p>
             <p><strong>✉️ Email:</strong> info@imspulgaon.in</p>
-            <p><strong>🏫 Address:</strong> Indian Military School, Pulgaon, Hiwara (Hadake), Arvi Road, Maharashtra</p>
+            <p><strong>🏫 Address:</strong> At- Hiwara (Hadke), Arvi Road, Pulgoan.</p>
+            <p>Post-Sorta, Tah-Deoli, Dist-Wardha. Maharashtra.</p> 
+            <p>Pin Code-442302.</p>
           </div>
 
           {/* Image */}
           <div style={styles.imageFrame}>
             <img
-  src="/sliderimg/location.jpg"
-  alt="School"
-  style={styles.image}
-/>
+                  src={locationImg}
+                  alt="School"
+                  style={styles.image}
+            />
 
           </div>
         </div>
@@ -42,6 +48,42 @@ export default function ContactUs() {
   loading="lazy"
   referrerPolicy="no-referrer-when-downgrade"
 />
+
+
+
+
+     <h1 style={{ textAlign: "center", marginTop: "130px" }}>Connect With Us</h1>
+ <div style={styles.socialBox}>
+  <a
+    href="https://youtu.be/o9V78VCA4Xk?si=ABb1EVm5nnWQP-Yy"
+    target="_blank"
+    rel="noreferrer"
+    style={styles.socialItem}
+  >
+    <FaYoutube style={{ ...styles.socialIcon, color: "#FF0000" }} />
+    <span>YouTube</span>
+  </a>
+
+  <a
+    href="https://www.facebook.com/profile.php?id=100067904228930"
+    target="_blank"
+    rel="noreferrer"
+    style={styles.socialItem}
+  >
+    <FaFacebookF style={{ ...styles.socialIcon, color: "#1877F2" }} />
+    <span>Facebook</span>
+  </a>
+
+  <a
+    href="https://twitter.com/IndianMilitarySch"
+    target="_blank"
+    rel="noreferrer"
+    style={styles.socialItem}
+  >
+    <FaTwitter style={{ ...styles.socialIcon, color: "#1DA1F2" }} />
+    <span>Twitter</span>
+  </a>
+ </div>
 
 
         </div>
@@ -103,24 +145,44 @@ const styles = {
     fontSize: "18px",
   },
   imageFrame: {
-  width: "100%",
-  height: "300px",          // slightly taller to show full image
-  marginTop: "20px",
-  borderRadius: "15px",
-  overflow: "hidden",
-  border: "4px solid #cfd8e3",
-  boxShadow: "0 3px 10px rgba(0,0,0,0.15)",
-  display: "flex",          // center the image
-  justifyContent: "center",
+    width: "100%",
+    height: "300px",
+    marginTop: "20px",
+    borderRadius: "15px",
+    border: "4px solid #cfd8e3",
+    overflow: "hidden",
+    backgroundColor: "#f5f5f5",
+  },
+  image: {
+    width: "100%",
+    height: "100%",
+    objectFit: "contain", // ✅ FULL IMAGE VISIBLE
+  },
+
+   /* SOCIAL */
+ socialBox: {
+  marginTop: "30px",
+  display: "flex",
+  gap: "60px",
+  marginLeft: "150px",
+},
+
+socialItem: {
+  display: "flex",
+  flexDirection: "column",
   alignItems: "center",
-  backgroundColor: "#f0f0f0" // in case image is smaller
+  textDecoration: "none",
+  fontSize: "14px",
+  fontWeight: "600",
+  color: "#222",
 },
-image: {
-  width: "100%",
-  height: "100%",
-  objectFit: "cover",       // covers the frame, keeps aspect ratio
-  display: "block"
+
+socialIcon: {
+  fontSize: "36px",
+  marginBottom: "6px",
+  transition: "transform 0.3s ease",
 },
+
 
   map: {
     borderRadius: "15px",

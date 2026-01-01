@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/IMSP-Frontend/static/css/main.7cf59b9b.css",
-    "main.js": "/IMSP-Frontend/static/js/main.ad065af6.js",
+    "main.js": "/IMSP-Frontend/static/js/main.e95ceb63.js",
     "static/js/453.d7446e4a.chunk.js": "/IMSP-Frontend/static/js/453.d7446e4a.chunk.js",
     "static/media/headerb.mp4": "/IMSP-Frontend/static/media/headerb.443e948b1d978f64dbc0.mp4",
     "static/media/seceratory.png": "/IMSP-Frontend/static/media/seceratory.127c20bb12023d258ca4.png",
@@ -10,23 +10,25 @@
     "static/media/slider6.jpg": "/IMSP-Frontend/static/media/slider6.4ba9ba03cc28a0435849.jpg",
     "static/media/slider2.jpg": "/IMSP-Frontend/static/media/slider2.a30c25462699f2e02b21.jpg",
     "static/media/slider1.jpg": "/IMSP-Frontend/static/media/slider1.2afb29135f4e227162eb.jpg",
+    "static/media/location.jpg": "/IMSP-Frontend/static/media/location.91c693dc4563dadaefb2.jpg",
     "static/media/slider3.jpg": "/IMSP-Frontend/static/media/slider3.70063ba7eaded2cb6689.jpg",
     "static/media/military-school-bg.jpg": "/IMSP-Frontend/static/media/military-school-bg.e39a985beb95c95af1aa.jpg",
     "static/media/slider4.jpg": "/IMSP-Frontend/static/media/slider4.0bb6829fd1a7bdb190b6.jpg",
+    "static/media/logo.jpg": "/IMSP-Frontend/static/media/logo.ffad1e84e2ad2468b660.jpg",
     "static/media/slider7.jpg": "/IMSP-Frontend/static/media/slider7.cabf96afdf85d7758631.jpg",
     "static/media/slider8.jpg": "/IMSP-Frontend/static/media/slider8.a37dc805c17f43ffac90.jpg",
     "static/media/slider10.jpg": "/IMSP-Frontend/static/media/slider10.b8c0b1e703c3d7c28498.jpg",
-    "static/media/viceprincipal.jpg": "/IMSP-Frontend/static/media/viceprincipal.5b59f82f1748ffac66b2.jpg",
     "static/media/slider9.jpg": "/IMSP-Frontend/static/media/slider9.e532abfd6f4dd17111c3.jpg",
     "static/media/Princippal.png": "/IMSP-Frontend/static/media/Princippal.4484eef6e9e5cd4d8351.png",
     "static/media/colonel.png": "/IMSP-Frontend/static/media/colonel.f4b65f08fab0af71794f.png",
+    "static/media/viceprincipal.jpg": "/IMSP-Frontend/static/media/viceprincipal.42bde15b47506651a416.jpg",
     "index.html": "/IMSP-Frontend/index.html",
     "main.7cf59b9b.css.map": "/IMSP-Frontend/static/css/main.7cf59b9b.css.map",
-    "main.ad065af6.js.map": "/IMSP-Frontend/static/js/main.ad065af6.js.map",
+    "main.e95ceb63.js.map": "/IMSP-Frontend/static/js/main.e95ceb63.js.map",
     "453.d7446e4a.chunk.js.map": "/IMSP-Frontend/static/js/453.d7446e4a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7cf59b9b.css",
-    "static/js/main.ad065af6.js"
+    "static/js/main.e95ceb63.js"
   ]
 }

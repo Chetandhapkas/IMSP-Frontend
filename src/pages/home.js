@@ -179,14 +179,14 @@ function Home() {
     <div className="box">
       <img src={principal} alt="Principal" />
       <h3>Principal</h3>
-      <h5>Mr. Ravikiran Bhijane Sir</h5>
+      <h5>Mr. Ravikiran Bhojane Sir</h5>
       <p>Responsible for academic excellence and maintaining discipline.</p>
     </div>
 
     <div className="box">
       <img src={vicePrincipal} alt="Vice Principal" />
       <h3>Vice Principal</h3>
-      <h5>Mr. [Name]</h5>
+      <h5>Mr.Nitin Kothe sir</h5>
       <p>Assisting in managing academic programs and student affairs.</p>
     </div>
   </div>
