@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/IMSP-Frontend/static/css/main.5490b032.css",
+    "main.css": "/IMSP-Frontend/static/css/main.c6cc57e3.css",
     "main.js": "/IMSP-Frontend/static/js/main.025aa665.js",
     "static/js/453.d7446e4a.chunk.js": "/IMSP-Frontend/static/js/453.d7446e4a.chunk.js",
     "static/media/headerb.mp4": "/IMSP-Frontend/static/media/headerb.443e948b1d978f64dbc0.mp4",
@@ -42,12 +42,12 @@
     "static/media/colonel.png": "/IMSP-Frontend/static/media/colonel.f4b65f08fab0af71794f.png",
     "static/media/viceprincipal.jpg": "/IMSP-Frontend/static/media/viceprincipal.42bde15b47506651a416.jpg",
     "index.html": "/IMSP-Frontend/index.html",
-    "main.5490b032.css.map": "/IMSP-Frontend/static/css/main.5490b032.css.map",
+    "main.c6cc57e3.css.map": "/IMSP-Frontend/static/css/main.c6cc57e3.css.map",
     "main.025aa665.js.map": "/IMSP-Frontend/static/js/main.025aa665.js.map",
     "453.d7446e4a.chunk.js.map": "/IMSP-Frontend/static/js/453.d7446e4a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5490b032.css",
+    "static/css/main.c6cc57e3.css",
     "static/js/main.025aa665.js"
   ]
 }
