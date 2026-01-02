@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import staff from "../assets/images/staff.jpg";
 
 // Background image (commented for now)
 // import bg from "../assets/facultyimg/bg.jpg";
@@ -149,95 +150,210 @@ const Faculty = () => {
   return (
     <>
       <style>{`
-        body { margin: 0; font-family: Arial, sans-serif; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
-        .hero {
-          background: url("https://images.unsplash.com/photo-1509062522246-3755977927d7") center/cover;
-          padding: 90px 20px;
-          color: #fff;
-          text-align: center;
-          position: relative;
-        }
-        .hero::after {
-          content: "";
-          position: absolute;
-          inset: 0;
-          background: rgba(0,0,0,0.65);
-        }
-        .hero-content { position: relative; max-width: 900px; margin: auto; }
+/* ================= HERO ================= */
+.hero {
+  padding: 100px 20px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-        .btn {
-          background: #fff;
-          color: #1d4123ff;
-          padding: 12px 28px;
-          margin: 10px;
-          border-radius: 8px;
-          font-weight: bold;
-          border: none;
-          cursor: pointer;
-        }
-        .btn:hover { background: #1e4524ff; color: #fff; }
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
 
-        .faculty-section { padding: 60px 20px; background: #f5f7fa; }
-        .faculty-heading { text-align: center; font-size: 28px; margin-bottom: 30px; }
+.hero-content {
+  position: relative;
+  max-width: 900px;
+}
 
-        .faculty-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-          gap: 20px;
-          max-width: 1200px;
-          margin: auto;
-        }
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
 
-        .faculty-card {
-          background: #fff;
-          padding: 20px;
-          text-align: center;
-          border-radius: 12px;
-          box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-          cursor: pointer;
-          transition: all 0.3s ease;
-        }
-        .faculty-card:hover {
-          transform: translateY(-8px);
-          box-shadow: 0 12px 25px rgba(0,0,0,0.2);
-        }
-        .faculty-card img {
-          width: 110px;
-          height: 110px;
-          border-radius: 50%;
-          margin-bottom: 10px;
-        }
+.hero p {
+  font-size: 18px;
+  line-height: 1.6;
+}
 
-        /* MODAL */
-        .modal-overlay {
-          position: fixed;
-          inset: 0;
-          background: rgba(0,0,0,0.6);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          z-index: 1000;
-        }
-        .modal {
-          background: #fff;
-          padding: 30px;
-          border-radius: 14px;
-          width: 320px;
-          text-align: center;
-          position: relative;
-        }
-        .close {
-          position: absolute;
-          top: 10px;
-          right: 14px;
-          font-size: 22px;
-          cursor: pointer;
-        }
-      `}</style>
+/* ================= BUTTONS ================= */
+.btn {
+  background: #fff;
+  color: #1d4123;
+  padding: 12px 28px;
+  margin: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #1e4524;
+  color: #fff;
+}
+
+/* ================= FACULTY ================= */
+.faculty-section {
+  padding: 60px 20px;
+  background: #f5f7fa;
+}
+
+.faculty-heading {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 35px;
+}
+
+.faculty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.faculty-card {
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 14px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faculty-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.faculty-card img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* ================= MODAL ================= */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #fff;
+  padding: 30px;
+  border-radius: 14px;
+  width: 340px;
+  text-align: center;
+  position: relative;
+}
+
+.modal img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: 50vh;
+    padding: 60px 15px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 280px;
+    margin: 8px auto;
+    display: block;
+  }
+
+  .faculty-heading {
+    font-size: 24px;
+  }
+
+  .faculty-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+  }
+
+  .faculty-card {
+    padding: 15px;
+  }
+
+  .faculty-card img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .modal {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .faculty-grid {
+    grid-template-columns: 1fr;
+  }
+}
+`}</style>
+
 
       {/* HERO */}
-      <div className="hero">
+      <div
+  className="hero"
+  style={{
+    backgroundImage: `url(${staff})`,
+  }}
+>
         <div className="hero-content">
           <h1>Our Faculty</h1>
           <p>
@@ -294,30 +410,23 @@ const Faculty = () => {
         </div>
       )}
         <div style={{ marginTop: "20px", textAlign: "right" }}>
+  <div style={{ margin: "30px 0", textAlign: "center" }}>
   <Link
     to="/"
     style={{
       backgroundColor: "#1f7a2e",
       color: "#fff",
-      padding: "8px 16px",   // smaller size
+      padding: "10px 20px",
       borderRadius: "8px",
       textDecoration: "none",
       fontWeight: "bold",
       fontSize: "14px",
-      transition: "all 0.3s ease",
       display: "inline-block",
-    }}
-    onMouseEnter={(e) => {
-      e.target.style.backgroundColor = "#071408ff"; // darker on hover
-      e.target.style.transform = "scale(1.05)";
-    }}
-    onMouseLeave={(e) => {
-      e.target.style.backgroundColor = "#101f0cff"; // original color
-      e.target.style.transform = "scale(1)";
     }}
   >
     ← Back to Home
   </Link>
+</div>
 </div>
 
     </>

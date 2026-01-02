@@ -1,59 +1,57 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import locationImg from "../assets/sliderimage/location.jpg";
 import { FaYoutube, FaFacebookF, FaTwitter } from "react-icons/fa";
 
-
-
-
 export default function ContactUs() {
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div style={styles.page}>
-      <div style={styles.wrapper}>
+      <div style={isMobile ? styles.wrapperMobile : styles.wrapperDesktop}>
 
-        {/* LEFT SECTION */}
-        <div style={styles.left}>
+        {/* LEFT */}
+        <div>
           <h1 style={styles.title}>Contact Us</h1>
 
           <div style={styles.infoBox}>
-            <p><strong>📞 Phone:</strong> +91 9890444836 </p>
+            <p><strong>📞 Phone:</strong> +91 9890444836</p>
             <p><strong>📱 Mobile:</strong> +91 8087423247</p>
             <p><strong>✉️ Email:</strong> info@imspulgaon.in</p>
-            <p><strong>🏫 Address:</strong> At- Hiwara (Hadke), Arvi Road, Pulgoan.</p>
-            <p>Post-Sorta, Tah-Deoli, Dist-Wardha. Maharashtra.</p> 
+            <p><strong>🏫 Address:</strong> At- Hiwara (Hadke), Arvi Road, Pulgaon.</p>
+            <p>Post-Sorta, Tah-Deoli, Dist-Wardha.</p>
             <p>Pin Code-442302.</p>
           </div>
 
-          {/* Image */}
           <div style={styles.imageFrame}>
-            <img
-                  src={locationImg}
-                  alt="School"
-                  style={styles.image}
-            />
-
+            <img src={locationImg} alt="School" style={styles.image} />
           </div>
         </div>
 
-        {/* RIGHT SECTION - MAP */}
-        <div style={styles.right}>
+        {/* RIGHT */}
+        <div>
           <h2 style={styles.subtitle}>Find Us on Map</h2>
-<iframe
-  title="Indian Military School Map"
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3376.2918558650967!2d78.33569897470716!3d20.753876297164165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd474f803eaed89%3A0x4b01c07f5b704baf!2sindian%20military%20school!5e1!3m2!1sen!2sus!4v1766059390472!5m2!1sen!2sus"
-  width="100%"
-  height="350"
-  style={{ border: 0, borderRadius: "15px", boxShadow: "0 3px 12px rgba(0,0,0,0.15)" }}
-  allowFullScreen
-  loading="lazy"
-  referrerPolicy="no-referrer-when-downgrade"
-/>
 
+          <iframe
+            title="Indian Military School Map"
+           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3376.2918558650967!2d78.33569897470716!3d20.753876297164165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd474f803eaed89%3A0x4b01c07f5b704baf!2sindian%20military%20school!5e1!3m2!1sen!2sus!4v1766059390472!5m2!1sen!2sus"
+            style={isMobile ? styles.mapMobile : styles.mapDesktop}
+            loading="lazy"
+          />
 
+          <h2 style={styles.connectTitle}>Connect With Us</h2>
 
+          <div style={isMobile ? styles.socialMobile : styles.socialDesktop}>
 
-     <h1 style={{ textAlign: "center", marginTop: "130px" }}>Connect With Us</h1>
- <div style={styles.socialBox}>
   <a
     href="https://youtu.be/o9V78VCA4Xk?si=ABb1EVm5nnWQP-Yy"
     target="_blank"
@@ -83,24 +81,19 @@ export default function ContactUs() {
     <FaTwitter style={{ ...styles.socialIcon, color: "#1DA1F2" }} />
     <span>Twitter</span>
   </a>
- </div>
 
-
-        </div>
-        <div style={{ marginTop: "20px", textAlign: "center" }}>
-  <Link to="/" style={styles.backButton}>
-    ← Back to Home
-  </Link>
 </div>
 
+        </div>
+
+        <div style={styles.backWrapper}>
+          <Link to="/" style={styles.backButton}>← Back to Home</Link>
+        </div>
       </div>
 
-      {/* FOOTER */}
       <footer style={styles.footer}>
-        <h3 style={styles.footerTitle}>Indian Military School, Pulgaon</h3>
-        <p>Hiwara (Hadake), Arvi Road, Maharashtra</p>
-        <p>📞 07158-123456 | ✉️ info@imspulgaon.in</p>
-        <p style={{ marginTop: "8px", opacity: 0.7 }}>© 2025 Indian Military School. All Rights Reserved.</p>
+        <h3>Indian Military School, Pulgaon</h3>
+        <p>© 2025 All Rights Reserved</p>
       </footer>
     </div>
   );
@@ -109,113 +102,121 @@ export default function ContactUs() {
 const styles = {
   page: {
     backgroundColor: "#eef2f7",
-    padding: "30px",
-    fontFamily: "Arial, sans-serif",
+    padding: "20px",
+    fontFamily: "Arial",
   },
-  wrapper: {
+
+  /* DESKTOP */
+  wrapperDesktop: {
     maxWidth: "1200px",
-    margin: "0 auto",
-    background: "white",
+    margin: "auto",
+    background: "#fff",
+    padding: "25px",
     borderRadius: "18px",
-    padding: "30px",
     display: "grid",
     gridTemplateColumns: "1fr 1fr",
+    gap: "30px",
+  },
+
+  /* MOBILE */
+  wrapperMobile: {
+    maxWidth: "100%",
+    margin: "auto",
+    background: "#fff",
+    padding: "20px",
+    borderRadius: "15px",
+    display: "flex",
+    flexDirection: "column",
     gap: "25px",
-    boxShadow: "0 4px 15px rgba(0,0,0,0.15)",
   },
-  left: {},
-  right: {},
-  title: {
-    fontSize: "32px",
-    fontWeight: "bold",
-    marginBottom: "15px",
-  },
-  subtitle: {
-    fontSize: "26px",
-    marginBottom: "15px",
-    fontWeight: "600",
-  },
+
+  title: { fontSize: "30px", marginBottom: "15px" },
+  subtitle: { fontSize: "24px", marginBottom: "10px" },
+
   infoBox: {
     background: "#f8fbff",
-    padding: "18px",
-    borderRadius: "12px",
-    border: "1px solid #d6e2f5",
-    boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
-    lineHeight: "1.8",
-    fontSize: "18px",
+    padding: "16px",
+    borderRadius: "10px",
+    fontSize: "15px",
   },
+
   imageFrame: {
-    width: "100%",
-    height: "300px",
-    marginTop: "20px",
-    borderRadius: "15px",
-    border: "4px solid #cfd8e3",
+    marginTop: "15px",
+    height: "230px",
+    borderRadius: "12px",
     overflow: "hidden",
-    backgroundColor: "#f5f5f5",
   },
+
   image: {
     width: "100%",
     height: "100%",
-    objectFit: "contain", // ✅ FULL IMAGE VISIBLE
+    objectFit: "contain",
   },
 
-   /* SOCIAL */
- socialBox: {
-  marginTop: "30px",
-  display: "flex",
-  gap: "60px",
-  marginLeft: "150px",
-},
-
-socialItem: {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  textDecoration: "none",
-  fontSize: "14px",
-  fontWeight: "600",
-  color: "#222",
-},
-
-socialIcon: {
-  fontSize: "36px",
-  marginBottom: "6px",
-  transition: "transform 0.3s ease",
-},
-
-
-  map: {
+  mapDesktop: {
+    width: "100%",
+    height: "350px",
     borderRadius: "15px",
-    boxShadow: "0 3px 12px rgba(0,0,0,0.15)",
+    border: 0,
+  },
+
+  mapMobile: {
+    width: "100%",
+    height: "250px",
+    borderRadius: "12px",
+    border: 0,
+  },
+
+  connectTitle: {
+    textAlign: "center",
+    margin: "25px 0 15px",
+  },
+
+  socialDesktop: {
+    display: "flex",
+    justifyContent: "center",
+    gap: "40px",
+  },
+
+  socialMobile: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    gap: "15px",
+  },
+
+  socialItem: {
+    textDecoration: "none",
+    color: "#222",
+    fontWeight: "600",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  },
+
+  socialIcon: {
+    fontSize: "34px",
+  },
+
+  backWrapper: {
+    textAlign: "center",
+    gridColumn: "1 / -1",
   },
 
   backButton: {
-  display: "inline-block",
-  padding: "10px 25px",
-  backgroundColor: "#132a0fff",
-  color: "white",
-  borderRadius: "8px",
-  textDecoration: "none",
-  fontWeight: "bold",
-  boxShadow: "0 3px 8px rgba(0,0,0,0.2)",
-  transition: "all 0.3s ease",
-  cursor: "pointer",
-},
-backButtonHover: {
-  backgroundColor: "#35ae59ff",
-}
-,
-  footer: {
-    marginTop: "40px",
-    textAlign: "center",
-    padding: "20px 10px",
-    background: "#2d4528ff",
-    color: "white",
-    borderRadius: "15px",
+    padding: "10px 22px",
+    background: "#132a0f",
+    color: "#fff",
+    borderRadius: "8px",
+    textDecoration: "none",
   },
-  footerTitle: {
-    fontSize: "22px",
-    fontWeight: "bold",
-    marginBottom: "8px",
+
+  footer: {
+    marginTop: "30px",
+    background: "#2d4528",
+    color: "#fff",
+    textAlign: "center",
+    padding: "15px",
+    borderRadius: "12px",
   },
 };

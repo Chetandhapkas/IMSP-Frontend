@@ -1,13 +1,26 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import slider1 from "../assets/sliderimage/slider1.jpg";
-import slider2 from "../assets/sliderimage/slider2.jpg";
-import slider3 from "../assets/sliderimage/slider3.jpg";
-import slider4 from "../assets/sliderimage/slider4.jpg";
-import slider5 from "../assets/sliderimage/slider5.jpg";
+import G1 from "../assets/Gallery/G1.jpg";
+import G2 from "../assets/Gallery/G2.jpg";
+import G3 from "../assets/Gallery/G3.jpg";
+import G4 from "../assets/Gallery/G4.jpg";
+import G5 from "../assets/Gallery/G5.jpg";
+import G6 from "../assets/Gallery/G6.jpg";
+import G7 from "../assets/Gallery/G7.jpg";
+import G8 from "../assets/Gallery/G8.jpg";
+import G9 from "../assets/Gallery/G9.jpg";
+import G10 from "../assets/Gallery/G10.jpg";
+import G11 from "../assets/Gallery/G11.jpg";
+import G12 from "../assets/Gallery/G12.jpg";
+import G13 from "../assets/Gallery/G13.jpg";
+import G14 from "../assets/Gallery/G14.jpg";
+import G15 from "../assets/Gallery/G15.jpg";
+
+
+
 
 export default function GalleryPage() {
-  const images = [slider1, slider2, slider3, slider4, slider5];
+  const images = [G1, G2, G3, G4, G5, G6, G7, G8, G9, G10, G11, G12, G13, G14, G15];
   const [currentImg, setCurrentImg] = useState(null);
 
   return (

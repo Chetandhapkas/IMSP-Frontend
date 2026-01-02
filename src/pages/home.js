@@ -29,6 +29,20 @@ import slider8 from "../assets/sliderimage/slider8.jpg";
 import slider9 from "../assets/sliderimage/slider9.jpg";
 import slider10 from "../assets/sliderimage/slider10.jpg";
 
+//facilites 
+/*import hostel1 from "../assets/facilities/hostel1.jpg";
+import hostel2 from "../assets/facilities/hostel2.jpg";
+import hostel3 from "../assets/facilities/hostel3.jpg";
+
+import mess1 from "../assets/facilities/mess1.jpg";
+import mess2 from "../assets/facilities/mess2.jpg";
+import mess3 from "../assets/facilities/mess3.jpg";
+*/
+import school1 from "../assets/facilities/school1.jpg";
+import school2 from "../assets/facilities/school2.jpg";
+import school3 from "../assets/facilities/school3.jpg";
+
+
 function Home() { 
   const [formData, setFormData] = useState({
     name: "",
@@ -265,6 +279,81 @@ function Home() {
   </div>
 </section>
 
+{/* ================= FACILITIES SECTION ================= */}
+<section className="facilities-section">
+  <h2 className="facilities-heading">Our Facilities</h2>
+  <p className="facilities-subheading">
+    We provide disciplined, safe and well-equipped facilities to support academic excellence
+    and holistic development.
+  </p>
+
+  <div className="facilities-grid">
+
+    {/* HOSTEL */}
+    <div className="facility-card">
+      <div className="facility-slider">
+        <div className="slides">
+          <img src="/assets/facilities/hostel1.jpg" alt="Hostel" />
+          <img src="/assets/facilities/hostel2.jpg" alt="Hostel" />
+          <img src="/assets/facilities/hostel3.jpg" alt="Hostel" />
+        </div>
+      </div>
+      <h3>Hostel Facility</h3>
+      <ul>
+        <li>Separate & secure boys hostel</li>
+        <li>24×7 supervision & discipline</li>
+        <li>Study halls & daily routine</li>
+        <li>24×7 Water / Electricity  </li>
+        <li>Clean & hygienic environment</li>
+      </ul>
+    </div>
+
+    {/* MESS */}
+    <div className="facility-card">
+      <div className="facility-slider">
+        <div className="slides">
+          <img src="/assets/facilities/mess1.jpg" alt="Mess" />
+          <img src="/assets/facilities/mess2.jpg" alt="Mess" />
+          <img src="/assets/facilities/mess3.jpg" alt="Mess" />
+        </div>
+      </div>
+      <h3>Mess Facility</h3>
+      <ul>
+        <li>Nutritious & balanced meals</li>
+        <li>Fixed diet chart</li>
+        <li>Hygienic kitchen</li>
+        <li>RO purified drinking water</li>
+        <li>Staff supervised mess</li>
+      </ul>
+    </div>
+
+    {/* SCHOOL */}
+    <div className="facility-card">
+  <div className="facility-slider">
+    <div className="slides">
+      <img src={school1} alt="School" />
+      <img src={school2} alt="School" />
+      <img src={school3} alt="School" />
+
+    </div>
+  </div>
+
+  <h3>School Infrastructure</h3>
+  <ul>
+    <li>Spacious & ventilated classrooms</li>
+    <li>Science & computer laboratories</li>
+    <li>Smart teaching facilities</li>
+    <li>Large playground</li>
+    <li>Clean & green campus</li>
+  </ul>
+</div>
+
+
+  </div>
+</section>
+
+
+
 
       <Footer />
 
@@ -341,3 +430,5 @@ export default Home;
 
 
 //http://localhost:8080/api/allForms
+//npm run build
+//npm run deploy
