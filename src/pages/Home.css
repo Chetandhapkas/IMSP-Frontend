@@ -32,7 +32,7 @@ body, html {
   z-index: 2;
   font-size: 2.8rem;
   font-weight: 900;
-  color: #000000;
+  color: #e3d623;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
@@ -817,3 +817,136 @@ body, html {
   }
 }
 
+/* ===============================
+   FINAL MOBILE RESPONSIVE FIXES
+   (DO NOT TOUCH ABOVE CSS)
+=============================== */
+
+/* ---------- HEADER ---------- */
+@media (max-width: 768px) {
+  .main-header {
+    height: 180px;
+  }
+
+  .main-header h1 {
+    font-size: 22px;
+  }
+
+  .motto {
+    font-size: 14px;
+    top: 65%;
+  }
+}
+
+/* ---------- NAVBAR ---------- */
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .main-nav a,
+  .main-nav button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* ---------- HERO ---------- */
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
+
+  .hero-title {
+    font-size: 26px;
+  }
+
+  .hero-tagline {
+    font-size: 15px;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/* ---------- ABOUT SECTION ---------- */
+@media (max-width: 768px) {
+  .about-content {
+    padding: 20px 15px;
+  }
+
+  .about-content h2 {
+    font-size: 22px;
+  }
+
+  .about-content p {
+    font-size: 14px;
+  }
+}
+
+/* ---------- FOUNDER SECTION ---------- */
+@media (max-width: 768px) {
+  .founder-row-2,
+  .founder-row-3 {
+    gap: 25px;
+  }
+
+  .box {
+    width: 95%;
+  }
+}
+
+/* ---------- GALLERY ---------- */
+@media (max-width: 768px) {
+  .gallery-section {
+    padding: 40px 15px;
+  }
+
+  .show-more-btn {
+    font-size: 14px;
+    padding: 10px 22px;
+  }
+}
+
+/* ---------- FACILITIES ---------- */
+@media (max-width: 768px) {
+  .facility-slider {
+    height: 160px;
+  }
+
+  .slides img {
+    height: 160px;
+  }
+}
+
+/* ---------- POPUP ---------- */
+@media (max-width: 480px) {
+  .popup h2 {
+    font-size: 18px;
+  }
+
+  .popup input {
+    font-size: 14px;
+  }
+
+  .popup button {
+    font-size: 14px;
+  }
+}
+
+/* ---------- FOOTER ---------- */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-about,
+  .footer-contact,
+  .footer-links {
+    margin: 15px 0;
+  }
+}

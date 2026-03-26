@@ -47,9 +47,19 @@ function Navbar() {
         <li>
           <Link to="/gallery">Gallery</Link>
         </li>
-        <li>
-          <Link to="/results">Results</Link>
-        </li>
+        <li className="dropdown">
+  <span className="dropbtn">Results ▾</span>
+  <div className="dropdown-content">
+    <Link to="/results" state={{ type: "SSC" }}>
+      SSC Results
+    </Link>
+    <Link to="/results" state={{ type: "HSC" }}>
+      HSC Results
+    </Link>
+  </div>
+</li>
+
+
         <li>
           <Link to="/contactus">Contact</Link>
         </li>

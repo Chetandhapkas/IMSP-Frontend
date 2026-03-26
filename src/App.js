@@ -7,6 +7,7 @@ import Academics from "./pages/Academics";
 import ContactUs from "./pages/Contactus";
 import GalleryPage from "./pages/Gallery";
 import Faculty from "./pages/faculty";
+import ResultBoard from "./pages/Result";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route path="/contactus" element={<ContactUs />} />
       <Route path="/gallery" element={<GalleryPage />} />
       <Route path="/faculty" element={<Faculty />} />
+      <Route path="/results" element={<ResultBoard />} />
     </Routes>
   );
 }
