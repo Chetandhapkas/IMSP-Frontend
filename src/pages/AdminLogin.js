@@ -14,8 +14,8 @@ function AdminLogin() {
     const inputPassword = password.trim();
 
     // ✅ Your credentials
-    const adminEmail = "admin@gmail.com";
-    const adminPassword = "12345";
+    const adminEmail = "Chetandhapkas@gmail.com";
+    const adminPassword = "M@yur2707";
 
     if (inputEmail === adminEmail && inputPassword === adminPassword) {
       localStorage.setItem("isAdmin", "true");
