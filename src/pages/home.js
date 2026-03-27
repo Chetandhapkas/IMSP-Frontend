@@ -110,7 +110,7 @@ function Home() {
     try {
       setLoading(true); // start loading
 
-      const response = await fetch("https://http://imsp-backend.onrender.com/api/submitForm", {
+      const response = await fetch("https://imsp-backend.onrender.com/api/submitForm", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
