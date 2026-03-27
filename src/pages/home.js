@@ -54,33 +54,98 @@ function Home() {
   const [showPopup, setShowPopup] = useState(false);
   const [showThankYou, setShowThankYou] = useState(false);
 
-  // Handle input changes
+  // ✅ NEW: loading state
+  const [loading, setLoading] = useState(false);
+
+  // ===============================
+  // ✅ Handle Input Change
+  // ===============================
   const handleInputChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+
+    // allow only numbers for mobile
+    if (name === "parentMobile" && !/^\d*$/.test(value)) {
+      return;
+    }
+
+    setFormData({ ...formData, [name]: value });
   };
 
-  // Handle form submission
+  // ===============================
+  // ✅ Validation Function
+  // ===============================
+  const validateForm = () => {
+    const { name, studentClass, parentEmail, parentMobile } = formData;
+
+    // trim validation
+    if (!name.trim() || !studentClass.trim() || !parentEmail.trim() || !parentMobile.trim()) {
+      alert("All fields are required ❌");
+      return false;
+    }
+
+    // email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(parentEmail)) {
+      alert("Enter valid email ❌");
+      return false;
+    }
+
+    // mobile validation
+    if (parentMobile.length !== 10 || isNaN(parentMobile)) {
+      alert("Mobile must be 10 digits ❌");
+      return false;
+    }
+
+    return true;
+  };
+
+  // ===============================
+  // ✅ Handle Submit
+  // ===============================
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!validateForm()) return;
+
     try {
-      const response = await fetch("https://imsp-backend.onrender.com/api/submitForm", {
+      setLoading(true); // start loading
+
+      const response = await fetch("https://http://imsp-backend.onrender.com/api/submitForm", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
-      if (!response.ok) throw new Error("Network response was not OK");
+      const result = await response.json();
 
-      console.log(await response.json());
+      setLoading(false); // stop loading
+
+      if (!response.ok) {
+        alert(result.message || "Something went wrong ❌");
+        return;
+      }
+
+      console.log(result);
+
       setShowThankYou(true);
+
+      // auto close popup after 3 sec
+      setTimeout(() => {
+        setShowPopup(false);
+        setShowThankYou(false);
+      }, 3000);
+
+      // reset form
       setFormData({
         name: "",
         studentClass: "",
         parentEmail: "",
         parentMobile: "",
       });
+
     } catch (error) {
-      alert("Error submitting form. Please try again.");
+      setLoading(false);
+      alert("Server is busy. Please try again ❌");
       console.error(error);
     }
   };
@@ -376,6 +441,7 @@ function Home() {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
+                    minLength="3"
                   />
                   <input
                     type="text"
@@ -400,8 +466,12 @@ function Home() {
                     value={formData.parentMobile}
                     onChange={handleInputChange}
                     required
+                    maxLength="10"
+                    pattern="[0-9]{10}"
                   />
-                  <button type="submit">Submit</button>
+                  <button type="submit" disabled={loading}>
+                      {loading ? "Submitting..." : "Submit"}
+                  </button>
                 </form>
               </div>
             ) : (

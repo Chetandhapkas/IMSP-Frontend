@@ -8,6 +8,7 @@ import ContactUs from "./pages/Contactus";
 import GalleryPage from "./pages/Gallery";
 import Faculty from "./pages/faculty";
 import ResultBoard from "./pages/Result";
+import Admin from "./pages/Admin";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Route path="/gallery" element={<GalleryPage />} />
       <Route path="/faculty" element={<Faculty />} />
       <Route path="/results" element={<ResultBoard />} />
+      <Route path="/admin" element={<Admin />} />
     </Routes>
   );
 }
