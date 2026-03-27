@@ -1,8 +1,11 @@
 {
   "files": {
     "main.css": "/IMSP-Frontend/static/css/main.046b7402.css",
-    "main.js": "/IMSP-Frontend/static/js/main.c0e2937c.js",
-    "static/js/453.d7446e4a.chunk.js": "/IMSP-Frontend/static/js/453.d7446e4a.chunk.js",
+    "main.js": "/IMSP-Frontend/static/js/main.9e9e680c.js",
+    "static/js/239.ad40150f.chunk.js": "/IMSP-Frontend/static/js/239.ad40150f.chunk.js",
+    "static/js/977.29f78a79.chunk.js": "/IMSP-Frontend/static/js/977.29f78a79.chunk.js",
+    "static/js/455.22d4e1b1.chunk.js": "/IMSP-Frontend/static/js/455.22d4e1b1.chunk.js",
+    "static/js/453.8701dc61.chunk.js": "/IMSP-Frontend/static/js/453.8701dc61.chunk.js",
     "static/media/headerb.mp4": "/IMSP-Frontend/static/media/headerb.443e948b1d978f64dbc0.mp4",
     "static/media/seceratory.png": "/IMSP-Frontend/static/media/seceratory.127c20bb12023d258ca4.png",
     "static/media/president.png": "/IMSP-Frontend/static/media/president.29098dad5cdb6e8b192e.png",
@@ -44,11 +47,14 @@
     "static/media/viceprincipal.jpg": "/IMSP-Frontend/static/media/viceprincipal.42bde15b47506651a416.jpg",
     "index.html": "/IMSP-Frontend/index.html",
     "main.046b7402.css.map": "/IMSP-Frontend/static/css/main.046b7402.css.map",
-    "main.c0e2937c.js.map": "/IMSP-Frontend/static/js/main.c0e2937c.js.map",
-    "453.d7446e4a.chunk.js.map": "/IMSP-Frontend/static/js/453.d7446e4a.chunk.js.map"
+    "main.9e9e680c.js.map": "/IMSP-Frontend/static/js/main.9e9e680c.js.map",
+    "239.ad40150f.chunk.js.map": "/IMSP-Frontend/static/js/239.ad40150f.chunk.js.map",
+    "977.29f78a79.chunk.js.map": "/IMSP-Frontend/static/js/977.29f78a79.chunk.js.map",
+    "455.22d4e1b1.chunk.js.map": "/IMSP-Frontend/static/js/455.22d4e1b1.chunk.js.map",
+    "453.8701dc61.chunk.js.map": "/IMSP-Frontend/static/js/453.8701dc61.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.046b7402.css",
-    "static/js/main.c0e2937c.js"
+    "static/js/main.9e9e680c.js"
   ]
 }
