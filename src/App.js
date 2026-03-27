@@ -9,6 +9,7 @@ import GalleryPage from "./pages/Gallery";
 import Faculty from "./pages/faculty";
 import ResultBoard from "./pages/Result";
 import Admin from "./pages/Admin";
+import AdminLogin from "./pages/AdminLogin";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Route path="/faculty" element={<Faculty />} />
       <Route path="/results" element={<ResultBoard />} />
       <Route path="/admin" element={<Admin />} />
+      <Route path="/admin-login" element={<AdminLogin />} />
     </Routes>
   );
 }
