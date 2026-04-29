@@ -501,5 +501,8 @@ export default Home;
 
 
 //http://localhost:8080/api/allForms
+//git add .
+//git commit -m "Added form validation and thank you message"
+//git push origin main
 //npm run build
 //npm run deploy
