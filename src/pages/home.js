@@ -30,14 +30,14 @@ import slider9 from "../assets/sliderimage/slider9.jpg";
 import slider10 from "../assets/sliderimage/slider10.jpg";
 
 //facilites 
-/*import hostel1 from "../assets/facilities/hostel1.jpg";
+import hostel1 from "../assets/facilities/hostel1.jpg";
 import hostel2 from "../assets/facilities/hostel2.jpg";
 import hostel3 from "../assets/facilities/hostel3.jpg";
 
 import mess1 from "../assets/facilities/mess1.jpg";
 import mess2 from "../assets/facilities/mess2.jpg";
 import mess3 from "../assets/facilities/mess3.jpg";
-*/
+
 import school1 from "../assets/facilities/school1.jpg";
 import school2 from "../assets/facilities/school2.jpg";
 import school3 from "../assets/facilities/school3.jpg";
@@ -111,10 +111,13 @@ function Home() {
       setLoading(true); // start loading
 
       const response = await fetch("https://imsp-backend.onrender.com/api/submitForm", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+  method: "POST",
+  mode: "cors",   // ✅ ADD THIS
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(formData),
+});
 
       const result = await response.json();
 
@@ -358,9 +361,9 @@ function Home() {
     <div className="facility-card">
       <div className="facility-slider">
         <div className="slides">
-          <img src="/assets/facilities/hostel1.jpg" alt="Hostel" />
-          <img src="/assets/facilities/hostel2.jpg" alt="Hostel" />
-          <img src="/assets/facilities/hostel3.jpg" alt="Hostel" />
+          <img src={hostel1} alt="Hostel" />
+          <img src={hostel2} alt="Hostel" />
+          <img src={hostel3} alt="Hostel" />
         </div>
       </div>
       <h3>Hostel Facility</h3>
@@ -377,9 +380,9 @@ function Home() {
     <div className="facility-card">
       <div className="facility-slider">
         <div className="slides">
-          <img src="/assets/facilities/mess1.jpg" alt="Mess" />
-          <img src="/assets/facilities/mess2.jpg" alt="Mess" />
-          <img src="/assets/facilities/mess3.jpg" alt="Mess" />
+          <img src={mess1} alt="Mess" />
+          <img src={mess2} alt="Mess" />
+          <img src={mess3} alt="Mess" />
         </div>
       </div>
       <h3>Mess Facility</h3>
@@ -416,8 +419,6 @@ function Home() {
 
   </div>
 </section>
-
-
 
 
       <Footer />

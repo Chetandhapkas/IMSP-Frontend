@@ -721,35 +721,43 @@ body, html {
   }
 }
 /* ===== Facility Slider ===== */
+/* ===== Facility Slider ===== */
 
 .facility-slider {
   width: 100%;
-  height: 200px;
+  height: 220px;
   overflow: hidden;
   position: relative;
+  background: #f1f1f1;
 }
 
 .slides {
   display: flex;
-  width: 300%;
+  height: 100%;
   animation: slideMove 9s infinite;
 }
 
 .slides img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  flex-shrink: 0;
+  min-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #f1f1f1;
 }
 
-/* Slider animation */
+/* Animation */
 @keyframes slideMove {
-  0%   { transform: translateX(0); }
-  33%  { transform: translateX(0); }
-  36%  { transform: translateX(-100%); }
-  66%  { transform: translateX(-100%); }
-  69%  { transform: translateX(-200%); }
-  100% { transform: translateX(-200%); }
+
+  0%, 30% {
+    transform: translateX(0%);
+  }
+
+  35%, 65% {
+    transform: translateX(-100%);
+  }
+
+  70%, 100% {
+    transform: translateX(-200%);
+  }
 }
 
 

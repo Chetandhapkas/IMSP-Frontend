@@ -100,29 +100,72 @@
 }
 
 /* ========== RESPONSIVE VIEW ========== */
+/* ===== Mobile Navbar ===== */
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #FFD700;
+  cursor: pointer;
+}
+
+/* Mobile Design */
 @media (max-width: 768px) {
+
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 25px;
+    flex-wrap: wrap;
+    padding: 12px 20px;
   }
 
+  .logo {
+    font-size: 22px;
+  }
+
+  .logo-img {
+    height: 42px;
+    width: 42px;
+  }
+
+  /* Show menu icon */
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  /* Hide menu initially */
   .nav-links {
+    display: none;
     flex-direction: column;
     width: 100%;
-    gap: 15px;
-    margin-top: 10px;
+    background: #2e3b2d;
+    margin-top: 15px;
+    padding: 15px 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  /* Show menu when active */
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: left;
+    padding: 0 20px;
   }
 
   .nav-links li a,
   .dropbtn {
-    font-size: 1.1rem;
+    display: block;
+    padding: 12px 0;
+    font-size: 16px;
+    border-bottom: none;
   }
 
-  /* Make dropdown open full width in mobile */
   .dropdown-content {
     position: relative;
     width: 100%;
-    min-width: 100%;
+    box-shadow: none;
+    background: #243223;
   }
 }
